@@ -1,0 +1,41 @@
+claim_number,provider,provider_address,date_of_service,claim_processed_on,service_count,total_amount_charged,total_medicare_approved,total_you_may_be_billed,complete_claim_json
+1826042286270,RENAL FOCUS ASC LLC,"671 OLD COUNTRY RDPLAINVIEW, NY 11803-4910",02/10/26,02/13/26,1,"$2,204.00",$629.50,$125.90,"{
+  ""basic_info"": {
+    ""date_of_service"": ""02/10/26"",
+    ""provider"": ""RENAL FOCUS ASC LLC"",
+    ""provider_address"": ""671 OLD COUNTRY RDPLAINVIEW, NY 11803-4910"",
+    ""claim_processed_on"": ""02/13/26"",
+    ""practicing_providers"": ""Not available"",
+    ""claim_number"": ""1826042286270""
+  },
+  ""services"": [
+    {
+      ""service_name"": ""INSERTION OF NEEDLE AND/OR TUBE INTO HEMODIALYSIS CIRCUIT WITH REVIEW BY RADIOLOGIST"",
+      ""procedure_code"": ""36901"",
+      ""quantity"": ""1"",
+      ""provider_charged"": ""$2,204.00"",
+      ""medicare_approved"": ""$629.50"",
+      ""applied_to_deductible"": ""$0.00"",
+      ""coinsurance"": ""$125.90"",
+      ""you_may_be_billed"": ""$125.90""
+    }
+  ],
+  ""summary"": {
+    ""total_amount_charged"": ""$2,204.00"",
+    ""total_medicare_approved"": ""$629.50"",
+    ""blood_deductible"": ""$0.00"",
+    ""physical_therapy_charges"": ""$0.00"",
+    ""psychiatric_charges"": ""$0.00"",
+    ""occupational_therapy_charges"": ""$0.00"",
+    ""total_patient_paid_provider"": ""$0.00"",
+    ""total_medicare_paid_you"": ""$0.00"",
+    ""total_medicare_paid_provider"": ""$493.53"",
+    ""total_applied_to_deductible"": ""$0.00"",
+    ""total_coinsurance"": ""$125.90"",
+    ""total_you_may_be_billed"": ""$125.90""
+  },
+  ""validation_info"": {
+    ""provider_from_card"": ""Claim #1826042286270"",
+    ""date_from_card"": ""02/10/26""
+  }
+}"
