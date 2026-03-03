@@ -888,7 +888,7 @@ class DoctorProcessor:
             
             # Clear all doctor fields first
             for dr_num in range(1, 21):
-                for field in ['', '_ADDRESS', '_DATE', '_NPI', '_ENROLLMENT', '_SPECIALTY', '_SOURCE']:
+                for field in ['', '_ADDRESS', '_DATE', '_NPI', '_ENROLLMENT', '_SPECIALTY', '_SOURCE', '_PHONE', '_FAX']:
                     updated_row[f'DR{dr_num}{field}'] = ''
             
             # Add good doctors first (up to 20)
@@ -901,6 +901,8 @@ class DoctorProcessor:
                 updated_row[f'DR{i}_ENROLLMENT'] = doctor_data['enrollment']
                 updated_row[f'DR{i}_SPECIALTY'] = doctor_data['specialty']
                 updated_row[f'DR{i}_SOURCE'] = doctor_data['source']
+                updated_row[f'DR{i}_PHONE'] = doctor_data['phone']
+                updated_row[f'DR{i}_FAX'] = doctor_data['fax']
             
             # Add categorized suggestions
             if bad_specialty_doctors:
@@ -1018,6 +1020,8 @@ class DoctorProcessor:
     
     def format_doctor_data(self, provider, dr_address, dr_date, enrollment_status, source):
         """Format doctor data for output"""
+        phone = provider.get('practicePhone', '')
+        fax = provider.get('practiceFax', '')
         return {
             'full_string': f"{provider.get('fullName', '')} // {dr_address} // {provider.get('npi', '')} // {enrollment_status} // {provider.get('primaryTaxonomyName', '')} // {dr_date}",
             'address': dr_address,
@@ -1025,7 +1029,9 @@ class DoctorProcessor:
             'npi': provider.get('npi', ''),
             'enrollment': enrollment_status,
             'specialty': provider.get('primaryTaxonomyName', ''),
-            'source': source
+            'source': source,
+            'phone': phone,
+            'fax': fax
         }
     
     def add_to_report(self, row, dr_num, dr_name, dr_address, reason, debug_info=None):
